@@ -21,13 +21,13 @@ pipeline {
         
         stage('PMD') {
             steps {
-                sh 'echo PMD Stage'
+                sh 'mvn pmd:pmd'
             }
         }
         
         stage('PMD_CPD') {
             steps {
-                sh  'echo PMD_CPD Stage'
+                sh  'mvn pmd:cpd'
             }
         }
         
